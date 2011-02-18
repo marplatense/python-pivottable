@@ -356,4 +356,4 @@ I guess that's all. Thanks for your patience. If you are interested in more exam
 
 .. _Collective.Pivottable: http://pypi.python.org/pypi/collective.pivottable/1.1.1dev-r97462
 .. _Capsule Corp: http://www.dragonballencyclopedia.com/index.php?title=Capsule_Corporation&variant=qdb
-.. _test suite: https://bitbucket.org/marplatense/python-pivottable/
+.. _test suite: https://github.com/marplatense/python-pivottable/blob/master/tests/test.py
