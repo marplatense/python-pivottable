@@ -1,0 +1,6 @@
+The primary author of python pivottable is Mariano Mara <mariano.mara@gmail.com>
+
+This little module draw a lot (and I mean A LOT) of inspiration from collective.pivottable[1] developed by Luciano Pacheco at Simples Consultoria
+
+[1] http://pypi.python.org/pypi/collective.pivottable
+

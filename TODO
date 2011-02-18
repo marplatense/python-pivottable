@@ -1,0 +1,36 @@
+For next version (0.8.5)
+========================
+
+* Add __init__
+
+* Users should be able to add total and subtotals
+
+* Missing lines to test with different versions of python in order to attain 100%
+  code coverage:
+  + Python 2.7: 11-16, 35-37, 65, 68, 73, 76, 199-202
+  + Python 2.6: 11-16, 35-37, 65, 68, 73, 76, 199-202
+  + Python 2.5: 11-16, 35-37, 65, 68, 73, 76, 199-202
+  + Python 2.4: 11-16, 35-37, 65, 68, 73, 76, 199-202
+
+
+For next version (0.9)
+======================
+
+* Apply some memoization algorithm so that results are not calculated each time the 
+  attr is accesed. Since rows (the attr that brings the data to pivot) is a list and 
+  both rows and result are attributes is pretty hard to apply some standard caché 
+  algorithm: I need to find something that works with mutable objects, marking them 
+  as dirty as soon some extra information is added to 'rows'. This gets even harder 
+  since I want to support python>=2.4: as far as I can tell the most reasonable path 
+  is:
+  + for python>=2.6 use a mutable sequence type to perform some templating so that I 
+    can detect when rows are dirty + find some way to hash my current rows to find 
+    out if the cange is meaningful (monkeypatching the submitted object if it does 
+    not define a __hash__, maybe?)
+  + for python<2.6, just ignore the optimization part and let it work as it does now 
+    or subclassing UserList and then follow the rest of the path suggested up supra.
+
+* Add the possibility to have more than one to-be-pivotted column criteria (e.g. in 
+  metrics, the result and the target for each month)
+
+* Nothing else that I can think right now

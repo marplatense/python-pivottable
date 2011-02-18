@@ -1,0 +1,9 @@
+.coverage
+.pyc
+Session.vim
+tabla_ejemplo.ods
+.swp
+dist/
+build/
+pivottable.egg-info/
+README.html
